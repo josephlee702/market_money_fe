@@ -1,12 +1,19 @@
 class Market
-  attr_reader :name,
+  attr_reader :id,
+              :name,
+              :street,
               :city,
               :state
 
-  def initialize(attributes)
-    @id = attributes[:id]
-    @name = attributes[:attributes][:name]
-    @city = attributes[:attributes][:city]
-    @state = attributes[:attributes][:state]
+  def initialize(market)
+    @id = market[:id]
+    @name = market[:attributes][:name]
+    @street = market[:attributes][:street]
+    @city = market[:attributes][:city]
+    @state = market[:attributes][:state]
+  end
+
+  def full_address
+    "#{@street} #{@city}, #{@state}"
   end
 end

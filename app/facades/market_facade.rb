@@ -2,12 +2,12 @@ class MarketFacade
   def self.all_markets
     json_response = MarketService.all_markets
     json_response[:data].map do |market|
-      x = Market.new(market)
+      Market.new(market)
     end
   end
 
-  def self.one_market(market)
-    json_response = MarketService.one_market
-    require 'pry'; binding.pry
+  def self.market_details(market_id)
+    json_response = MarketService.market_details(market_id)
+    Market.new(json_response[:data])
   end
 end

@@ -4,6 +4,6 @@ class MarketsController < ApplicationController
   end
 
   def show
-    @market = MarketFacade.one_market
+    @market = MarketFacade.market_details(params[:id])
   end
 end

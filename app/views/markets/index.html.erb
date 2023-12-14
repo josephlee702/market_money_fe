@@ -37,7 +37,7 @@
   </tr>
     <% @markets.each do |market| %>
     <tr>
-      <td> <%= link_to market.name, market_path(market) %></td>
+      <td> <%= link_to market.name, "/markets/#{market.id}" %></td>
       <td> <%= market.city %></td>
       <td> <%= market.state %></td>
     </tr>

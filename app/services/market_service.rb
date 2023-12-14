@@ -12,7 +12,7 @@ class MarketService
     get_url('/api/v0/markets')
   end
 
-  def self.one_market
-    get_url('/api/v0/markets/:id')
+  def self.market_details(market_id)
+    get_url("/api/v0/markets/#{market_id}")
   end
 end
