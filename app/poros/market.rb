@@ -5,12 +5,12 @@ class Market
               :city,
               :state
 
-  def initialize(market)
-    @id = market[:id]
-    @name = market[:attributes][:name]
-    @street = market[:attributes][:street]
-    @city = market[:attributes][:city]
-    @state = market[:attributes][:state]
+  def initialize(attributes)
+    @id = attributes[:id]
+    @name = attributes[:attributes][:name]
+    @street = attributes[:attributes][:street]
+    @city = attributes[:attributes][:city]
+    @state = attributes[:attributes][:state]
   end
 
   def full_address

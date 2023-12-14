@@ -10,4 +10,10 @@ class MarketFacade
     json_response = MarketService.market_details(market_id)
     Market.new(json_response[:data])
   end
+
+  def self.get_vendors(market_id)
+    MarketService.get_vendors(market_id)[:data].each do |vendor_data|
+      Vendor.new(vendor_data)
+    end
+  end
 end

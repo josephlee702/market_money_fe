@@ -1,3 +1,6 @@
 <p><u>Market Name</u>: <%=@market.name%></p>
 <p><u>Address</u>: <%=@market.full_address%></p>
-<p><u>Vendors</u>:</p>
+<p><u>Vendors at our market</u>:</p>
+<% @vendors.each do |vendor| %>
+  <%= link_to vendor[:attributes][:name], "/vendors/#{vendor[:id]}" %>
+<% end %>
