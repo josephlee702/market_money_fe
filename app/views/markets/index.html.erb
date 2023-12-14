@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#markets {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#markets td, #markets th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#markets tr:nth-child(even){background-color: #f2f2f2;}
+
+#markets tr:hover {background-color: #ddd;}
+
+#markets th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+<h1><u> Markets </u></h1>
+<table id="markets">
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+    <% @markets.each do |market| %>
+    <tr>
+      <td> <%= link_to market.name, market_path(market) %></td>
+      <td> <%= market.city %></td>
+      <td> <%= market.state %></td>
+    </tr>
+    <% end %>
+</table>
+</body>
+</html>
+

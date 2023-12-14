@@ -41,6 +41,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'vcr'
+gem 'faraday'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -51,6 +54,11 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'pry'
+  gem 'simplecov'
+  gem 'webmock'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :development do
