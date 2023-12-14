@@ -8,10 +8,6 @@ class VendorService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.all_vendors
-    get_url('/api/v0/markets')
-  end
-
   def self.vendor_details(vendor_id)
     get_url("/api/v0/vendors/#{vendor_id}")
   end
